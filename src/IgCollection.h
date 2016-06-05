@@ -74,7 +74,7 @@ struct ColumnTypeHelper
   static ColumnType typeId(void)
     {
       assert(false);
-      return -1;
+      return INVALID;
     }
 };
 
@@ -902,7 +902,7 @@ public:
   template <class T>
   typename IgColumn<T>::Type get(IgColumn<T> &column)
     {
-      return column.handle().get<typename IgColumn<T>::Original>(m_position);
+      return column.handle().template get<typename IgColumn<T>::Original>(m_position);
     }
 
   template <class T>

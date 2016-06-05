@@ -73,11 +73,11 @@ IgArchiveReader::read(IgMember *member, std::string &result)
   if (unzGetCurrentFileInfo64(uf, &info, mn, ms, NULL, 0, NULL, 0) != UNZ_OK
       || unzOpenCurrentFile(uf) != UNZ_OK)
   {
-    delete mn;
+    delete[] mn;
     throw IgArchive::Exception();
   }
   
-  delete mn;
+  delete[] mn;
 
   char *buffer = (char*) malloc(info.uncompressed_size);
   int readSize = unzReadCurrentFile(uf, buffer, info.uncompressed_size);

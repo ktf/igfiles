@@ -23,7 +23,7 @@ public:
 int
 main(int argc, char **argv)
 {
-  std::ifstream f("src/QtGUI/default-style.iss");
+  std::ifstream f("tests/data/default-style.iss");
   TestParser parser(f);
 
   try

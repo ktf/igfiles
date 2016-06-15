@@ -4,5 +4,6 @@ compiler:
   - clang
   - gcc
 install: cmake . -DCMAKE_CXX_FLAGS="-fprofile-arcs -ftest-coverage" -DCMAKE_EXE_LINKER_FLAGS="--coverage -fprofile-arcs" -DCMAKE_SHARED_LINKER_FLAGS="--coverage -fprofile-arcs" && make && make test
+script: cmake . -DCMAKE_CXX_FLAGS="-fprofile-arcs -ftest-coverage" -DCMAKE_EXE_LINKER_FLAGS="--coverage -fprofile-arcs" -DCMAKE_SHARED_LINKER_FLAGS="--coverage -fprofile-arcs" && make && make test
 after_success:
   - bash <(curl -s https://codecov.io/bash)

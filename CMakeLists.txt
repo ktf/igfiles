@@ -1,5 +1,6 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.1)
 project(igfiles)
+set(CMAKE_CXX_STANDARD 11)
 enable_testing()
 
 set(LIBRARY_OUTPUT_PATH build)

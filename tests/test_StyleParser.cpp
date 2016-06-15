@@ -29,25 +29,36 @@ main(int argc, char **argv)
   try
   {
     parser.parse();
-  } 
+  }
   catch (IgStyleParser::StyleParserError &e)
   {
     std::cerr << e.explain() << std::endl;
     exit(1);
     assert(false);
   }
-  
+
   std::stringstream str("* {color: rgb(.7,.7,.7) ;} Background {diffuse-color: rgb(1., 0, 0);}");
   std::cerr << str.str() << std::endl;
   TestParser styleParser(str);
   try
   {
     styleParser.parse();
-  } 
+  }
   catch (IgStyleParser::StyleParserError &e)
   {
     std::cerr << e.explain() << std::endl;
     exit(1);
     assert(false);
   }
+
+  bool hasThrown = false;
+  try
+  {
+    throw IgStyleParser::StyleParserError("Dummy", "Error");
+  }
+  catch(IgStyleParser::StyleParserError &e)
+  {
+    hasThrown = true;
+  }
+  assert(hasThrown);
 }

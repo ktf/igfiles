@@ -1,0 +1,6 @@
+compiler:
+  - clang
+  - gcc
+install: cmake . && make install
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

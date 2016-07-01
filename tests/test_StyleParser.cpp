@@ -61,4 +61,7 @@ main(int argc, char **argv)
     hasThrown = true;
   }
   assert(hasThrown);
+
+  std::stringstream str2("// A comment\n* {name: \"pippo\" ; version: 'pluto'}");
+  TestParser styleParser2(str);
 }

@@ -36,9 +36,6 @@ IgArchive::readMembers()
     //        larger than 4096 characters???
     char memberName[4096];
     unz_file_info64 file_info;
-    uLong ratio=0;
-    const char *string_method;
-    char charCrypt=' ';
     err = unzGetCurrentFileInfo64(uf, &file_info, memberName,
                                   sizeof(memberName), NULL, 0, NULL, 0);
     if (err != UNZ_OK)

@@ -2,8 +2,8 @@
 # include <Iguana/Framework/interface/IgCollection.h>
 # include <Iguana/Framework/interface/IgParser.h>
 #else
-# include <IgCollection.h>
-# include <IgParser.h>
+# include "IgCollection.h"
+# include "IgParser.h"
 #endif
 
 #include <cstdio>

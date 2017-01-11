@@ -1,5 +1,5 @@
 // Supported types
-#include <IgCollection.h>
+#include "IgCollection.h"
 
 #include <string>
 #include <cassert>

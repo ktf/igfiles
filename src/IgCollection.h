@@ -1,7 +1,7 @@
 #ifndef IGUANA_IG_COLLECTION_H
 #define IGUANA_IG_COLLECTION_H
 
-#include <IgLinearAlgebra.h>
+#include "IgLinearAlgebra.h"
 #include <cstring>
 #include <string>
 #include <cassert>
